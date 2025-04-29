@@ -1,0 +1,9 @@
+title: "My Awesome Blog"
+description: "A blog about AI, productivity, and personal growth."
+url: "https://bitesize-aiq.github.io"    # or https://yourdomain.com
+baseurl: ""                             # no subfolder
+markdown: kramdown
+kramdown:
+  math_engine: mathjax
+plugins:
+  - jekyll-sitemap

@@ -1,0 +1,24 @@
+body {
+    font-family: Arial, sans-serif;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 1rem;
+    line-height: 1.6;
+  }
+  header, footer {
+    text-align: center;
+    margin: 2rem 0;
+  }
+  nav a {
+    margin: 0 1rem;
+    text-decoration: none;
+    color: #0366d6;
+  }
+  nav a:hover {
+    text-decoration: underline;
+  }
+  #ad-top, #ad-bottom {
+    margin: 2rem 0;
+    text-align: center;
+  }
+  

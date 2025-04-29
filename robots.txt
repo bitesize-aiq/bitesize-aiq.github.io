@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://bitesize-aiq.github.io/sitemap.xml

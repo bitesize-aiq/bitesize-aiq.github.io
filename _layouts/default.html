@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  {% include head.html %}
+<body>
+  <header>
+    <h1><a href="{{ "/" | relative_url }}">{{ site.title }}</a></h1>
+    <nav>
+      <a href="{{ "/" | relative_url }}">Home</a> |
+      <a href="{{ "/about" | relative_url }}">About</a> |
+      <a href="{{ "/contact" | relative_url }}">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Top ad placeholder -->
+    <div id="ad-top">
+      <!-- paste your AdSense code here -->
+    </div>
+
+    {{ content }}
+
+    <!-- Bottom ad placeholder -->
+    <div id="ad-bottom">
+      <!-- paste your AdSense code here -->
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; {{ site.time | date: "%Y" }} {{ site.title }}.</p>
+  </footer>
+</body>
+</html>
