@@ -1,9 +1,63 @@
-title: "My Awesome Blog"
-description: "A blog about AI, productivity, and personal growth."
-url: "https://bitesize-aiq.github.io"    # or https://yourdomain.com
-baseurl: ""                             # no subfolder
+title: "bitesize AIQ"
+description: >-
+  Helping everyone increase their artificial intelligence IQ, one bite at a time.
+  Discover the latest AI tools, concepts, and applications with easy-to-digest guides.
+url: "https://bitesize-aiq.github.io"
+baseurl: ""
+
+# Social media profiles
+twitter_username: bitesizeAIQ
+github_username: bitesize-aiq
+instagram_username: bitesizeaiq
+linkedin_username: company/bitesizeaiq
+
+# Build settings
 markdown: kramdown
+theme: minima
 kramdown:
   math_engine: mathjax
 plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
   - jekyll-sitemap
+  - jekyll-paginate
+
+# Author information
+author:
+  name: "AIQ Team"
+  bio: "We're passionate about making AI accessible to everyone through bite-sized insights on the latest AI tools and technologies."
+  email: "hello@bitesize-aiq.com"
+  twitter: "bitesizeaiq"
+
+# Pagination
+paginate: 9
+paginate_path: "/page/:num/"
+
+# Collections
+collections:
+  categories:
+    output: true
+    permalink: /category/:name/
+
+# Default front matter
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+      author: "AIQ Team"
+  - scope:
+      path: ""
+      type: "categories"
+    values:
+      layout: "category"
+
+# Exclude from processing
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor
+  - .gitignore
+  - README.md

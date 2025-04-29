@@ -1,0 +1,84 @@
+---
+layout: default
+---
+
+<article class="review">
+  <div class="container">
+    <header class="review-header">
+      <div class="review-meta">
+        <span class="review-type">Review</span>
+        <span class="review-date">{{ page.date | date: "%B %-d, %Y" }}</span>
+      </div>
+      
+      <h1 class="review-title">{{ page.title }}</h1>
+      
+      {% if page.description %}
+        <p class="review-excerpt">{{ page.description }}</p>
+      {% endif %}
+      
+      <div class="review-rating">
+        <div class="rating-stars" data-rating="{{ page.rating }}">
+          {% for i in (1..5) %}
+            {% if i <= page.rating %}
+              <span class="star filled"><i class="fas fa-star"></i></span>
+            {% else %}
+              <span class="star"><i class="far fa-star"></i></span>
+            {% endif %}
+          {% endfor %}
+        </div>
+        <span class="rating-text">{{ page.rating }} out of 5</span>
+      </div>
+      
+      {% if page.product_link %}
+        <a href="{{ page.product_link }}" target="_blank" rel="noopener noreferrer" class="product-link">
+          Visit Website <i class="fas fa-external-link-alt"></i>
+        </a>
+      {% endif %}
+    </header>
+
+    {% if page.featured_image %}
+    <div class="review-featured-image">
+      <img src="{{ page.featured_image }}" alt="{{ page.title }}">
+    </div>
+    {% endif %}
+
+    <div class="review-content">
+      {{ content }}
+    </div>
+    
+    <div class="review-summary">
+      <h2>Summary</h2>
+      
+      <div class="pros-cons">
+        <div class="pros">
+          <h3>Pros</h3>
+          <ul>
+            {% for pro in page.pros %}
+              <li><i class="fas fa-check"></i> {{ pro }}</li>
+            {% endfor %}
+          </ul>
+        </div>
+        
+        <div class="cons">
+          <h3>Cons</h3>
+          <ul>
+            {% for con in page.cons %}
+              <li><i class="fas fa-times"></i> {{ con }}</li>
+            {% endfor %}
+          </ul>
+        </div>
+      </div>
+      
+      <div class="review-verdict">
+        <h3>Verdict</h3>
+        <p>{{ page.verdict }}</p>
+      </div>
+      
+      {% if page.product_link %}
+        <a href="{{ page.product_link }}" target="_blank" rel="noopener noreferrer" class="cta-button">
+          Try {{ page.product_name }} Today <i class="fas fa-arrow-right"></i>
+        </a>
+      {% endif %}
+    </div>
+  </div>
+</article>

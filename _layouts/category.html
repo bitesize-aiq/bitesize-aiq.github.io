@@ -1,0 +1,61 @@
+---
+layout: default
+---
+
+<div class="page-header">
+  <div class="container">
+    <h1 class="page-title">{{ page.title }}</h1>
+    <p class="page-subtitle">{{ page.description }}</p>
+  </div>
+</div>
+
+<div class="category-posts">
+  <div class="container">
+    <div class="post-grid">
+      {% assign category_slug = page.permalink | split: '/' | last | remove: '/' %}
+      {% assign category_title = page.title %}
+      
+      {% assign category_posts = '' | split: '' %}
+      {% for post in site.posts %}
+        {% if post.categories contains category_title or post.categories contains category_slug %}
+          {% assign category_posts = category_posts | push: post %}
+        {% endif %}
+      {% endfor %}
+      
+      {% if category_posts.size == 0 %}
+        <div class="no-posts-message">
+          <p>No posts in this category yet. Check back soon!</p>
+        </div>
+      {% endif %}
+      
+      {% for post in category_posts %}
+        <article class="post-card">
+          <a href="{{ post.url | relative_url }}">
+            <div class="post-card-image">
+              {% if post.featured_image %}
+                <img src="{{ post.featured_image | relative_url }}" alt="{{ post.title }}">
+              {% else %}
+                <img src="{{ '/assets/images/placeholder.jpg' | relative_url }}" alt="{{ post.title }}">
+              {% endif %}
+              
+              {% if post.categories[0] %}
+                <span class="post-card-category">{{ post.categories[0] }}</span>
+              {% endif %}
+            </div>
+            
+            <div class="post-card-content">
+              <h3 class="post-card-title">{{ post.title }}</h3>
+              <div class="post-card-meta">
+                <span class="post-card-author">{{ post.author | default: site.author.name }}</span>
+                <span class="post-card-date">{{ post.date | date: "%B %-d, %Y" }}</span>
+              </div>
+              {% if post.description %}
+                <p class="post-card-excerpt">{{ post.description | truncate: 120 }}</p>
+              {% endif %}
+            </div>
+          </a>
+        </article>
+      {% endfor %}
+    </div>
+  </div>
+</div>
