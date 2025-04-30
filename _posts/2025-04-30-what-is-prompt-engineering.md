@@ -7,6 +7,7 @@ author: "AIQ Team"
 categories: ["AI Concepts"]
 tags: ["Prompt Engineering", "AI Skills", "AI Tools", "AI Communication", "LLMs"]
 featured_image: "/assets/images/posts/ai-literacy.jpg"
+difficulty: "Medium"
 ---
 
 As AI language models become increasingly powerful and accessible, a new skill has emerged that separates novices from experts: prompt engineering. In an age where the right instructions can unlock incredible AI capabilities, understanding how to effectively communicate with AI systems has become as valuable as traditional programming was in previous decades. In this article, we'll explore what prompt engineering is, why it has become a critical skill, and how you can master this art to revolutionize your interaction with AI tools.

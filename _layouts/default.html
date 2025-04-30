@@ -2,8 +2,6 @@
 <html lang="en">
   {% include head.html %}
   <body>
-    <a class="skip-link" href="#main-content">Skip to content</a>
-    
     <header class="site-header">
       <div class="container">
         <div class="header-content">
@@ -24,6 +22,7 @@
               <li><a href="{{ '/category/ai-tools/' | relative_url }}">AI Tools</a></li>
               <li><a href="{{ '/category/ai-concepts/' | relative_url }}">AI Concepts</a></li>
               <li><a href="{{ '/category/ai-applications/' | relative_url }}">AI Applications</a></li>
+              <li><a href="{{ '/all-articles/' | relative_url }}">All Articles</a></li>
               <li><a href="{{ '/about/' | relative_url }}">About</a></li>
               <li><a href="{{ '/contact/' | relative_url }}">Contact</a></li>
             </ul>
@@ -58,10 +57,18 @@
             <h3 class="footer-heading">About Us</h3>
             <p>{{ site.description }}</p>
             <div class="social-links">
-              <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
-              <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-              <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
-              <a href="#" aria-label="Discord"><i class="fab fa-discord"></i></a>
+              {% if site.twitter_username %}
+              <a href="https://twitter.com/{{ site.twitter_username }}" aria-label="Twitter" target="_blank"><i class="fab fa-twitter"></i></a>
+              {% endif %}
+              {% if site.linkedin_username %}
+              <a href="https://linkedin.com/{{ site.linkedin_username }}" aria-label="LinkedIn" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+              {% endif %}
+              {% if site.github_username %}
+              <a href="https://github.com/{{ site.github_username }}" aria-label="GitHub" target="_blank"><i class="fab fa-github"></i></a>
+              {% endif %}
+              {% if site.instagram_username %}
+              <a href="https://instagram.com/{{ site.instagram_username }}" aria-label="Instagram" target="_blank"><i class="fab fa-instagram"></i></a>
+              {% endif %}
             </div>
           </div>
           
@@ -71,7 +78,7 @@
               <li><a href="{{ '/' | relative_url }}">Home</a></li>
               <li><a href="{{ '/about/' | relative_url }}">About</a></li>
               <li><a href="{{ '/contact/' | relative_url }}">Contact</a></li>
-              <li><a href="{{ '/privacy-policy/' | relative_url }}">Privacy Policy</a></li>
+              <li><a href="{{ '/all-articles/' | relative_url }}">All Articles</a></li>
             </ul>
           </div>
           
@@ -81,6 +88,8 @@
               <li><a href="{{ '/category/ai-tools/' | relative_url }}">AI Tools</a></li>
               <li><a href="{{ '/category/ai-concepts/' | relative_url }}">AI Concepts</a></li>
               <li><a href="{{ '/category/ai-applications/' | relative_url }}">AI Applications</a></li>
+              <li><a href="{{ '/category/technology/' | relative_url }}">Technology</a></li>
+              <li><a href="{{ '/category/personal-growth/' | relative_url }}">Personal Growth</a></li>
             </ul>
           </div>
         </div>

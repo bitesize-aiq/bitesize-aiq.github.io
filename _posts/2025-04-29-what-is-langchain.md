@@ -7,6 +7,7 @@ author: "AIQ Team"
 categories: ["AI Tools", "AI Concepts"]
 tags: ["LangChain", "LLM Applications", "AI Development", "AI Framework"]
 featured_image: "/assets/images/posts/ai-literacy.jpg"
+difficulty: "Hard"
 ---
 
 As large language models (LLMs) continue to reshape our digital landscape, developers are seeking efficient ways to build sophisticated applications powered by these AI models. Enter LangChain, an innovative framework that's quickly becoming essential in the AI developer's toolkit. In this article, we'll explore what LangChain is, how it works with a simple example, and how businesses are leveraging it to create powerful AI solutions.

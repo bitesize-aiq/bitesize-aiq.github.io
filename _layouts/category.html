@@ -2,14 +2,14 @@
 layout: default
 ---
 
-<div class="page-header">
+<header class="page-header">
   <div class="container">
     <h1 class="page-title">{{ page.title }}</h1>
     <p class="page-subtitle">{{ page.description }}</p>
   </div>
-</div>
+</header>
 
-<div class="category-posts">
+<section class="section">
   <div class="container">
     <div class="post-grid">
       {% assign category_slug = page.permalink | split: '/' | last | remove: '/' %}
@@ -23,8 +23,10 @@ layout: default
       {% endfor %}
       
       {% if category_posts.size == 0 %}
-        <div class="no-posts-message">
-          <p>No posts in this category yet. Check back soon!</p>
+        <div class="no-posts-message" style="text-align: center; padding: 6rem 0;">
+          <h3>No posts in this category yet.</h3>
+          <p>Check back soon for new content!</p>
+          <a href="/" class="btn btn-primary" style="margin-top: 2rem;">Back to Home</a>
         </div>
       {% endif %}
       
@@ -35,27 +37,32 @@ layout: default
               {% if post.featured_image %}
                 <img src="{{ post.featured_image | relative_url }}" alt="{{ post.title }}">
               {% else %}
-                <img src="{{ '/assets/images/placeholder.jpg' | relative_url }}" alt="{{ post.title }}">
+                <img src="{{ '/assets/images/posts/ai-productivity.jpg' | relative_url }}" alt="{{ post.title }}">
               {% endif %}
               
-              {% if post.categories[0] %}
-                <span class="post-card-category">{{ post.categories[0] }}</span>
-              {% endif %}
+              <div class="post-card-tags">
+                {% if post.categories[0] %}
+                  <div class="post-card-category {{ post.categories[0] | slugify }}">{{ post.categories[0] | replace: '-', ' ' | replace: 'ai ', 'AI ' }}</div>
+                {% endif %}
+                {% if post.difficulty %}
+                  <div class="post-card-difficulty {{ post.difficulty | downcase }}">{{ post.difficulty }}</div>
+                {% endif %}
+              </div>
             </div>
             
             <div class="post-card-content">
               <h3 class="post-card-title">{{ post.title }}</h3>
+              {% if post.description %}
+                <p class="post-card-excerpt">{{ post.description | truncate: 120 }}</p>
+              {% endif %}
               <div class="post-card-meta">
                 <span class="post-card-author">{{ post.author | default: site.author.name }}</span>
                 <span class="post-card-date">{{ post.date | date: "%B %-d, %Y" }}</span>
               </div>
-              {% if post.description %}
-                <p class="post-card-excerpt">{{ post.description | truncate: 120 }}</p>
-              {% endif %}
             </div>
           </a>
         </article>
       {% endfor %}
     </div>
   </div>
-</div>
+</section>

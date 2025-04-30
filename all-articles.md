@@ -10,15 +10,29 @@ title: All Articles
     <div class="post-grid">
       {% for post in site.posts %}
         <div class="post-card">
-          {% if post.featured_image %}
-          <img src="{{ post.featured_image }}" alt="{{ post.title }}" class="post-image">
-          {% endif %}
-          <div class="post-content">
-            <span class="post-category">{{ post.categories[0] }}</span>
-            <h3><a href="{{ post.url }}">{{ post.title }}</a></h3>
-            <p>{{ post.description | truncate: 120 }}</p>
-            <span class="post-date">{{ post.date | date: "%B %d, %Y" }}</span>
-          </div>
+          <a href="{{ post.url }}">
+            {% if post.featured_image %}
+            <div class="post-card-image">
+              <img src="{{ post.featured_image }}" alt="{{ post.title }}">
+              <div class="post-card-tags">
+                {% if post.categories[0] %}
+                <div class="post-card-category {{ post.categories[0] | slugify }}">{{ post.categories[0] | replace: '-', ' ' | replace: 'ai ', 'AI ' }}</div>
+                {% endif %}
+                {% if post.difficulty %}
+                <div class="post-card-difficulty {{ post.difficulty | downcase }}">{{ post.difficulty }}</div>
+                {% endif %}
+              </div>
+            </div>
+            {% endif %}
+            <div class="post-card-content">
+              <h3 class="post-card-title">{{ post.title }}</h3>
+              <p class="post-card-excerpt">{{ post.description | truncate: 120 }}</p>
+              <div class="post-card-meta">
+                <span class="post-card-author">{{ post.author | default: site.author.name }}</span>
+                <span class="post-card-date">{{ post.date | date: "%B %d, %Y" }}</span>
+              </div>
+            </div>
+          </a>
         </div>
       {% endfor %}
     </div>

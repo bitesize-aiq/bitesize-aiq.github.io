@@ -7,6 +7,7 @@ author: "AIQ Team"
 categories: ["AI Concepts"]
 tags: ["AI Literacy", "Digital Literacy", "AI Education", "AI Skills"]
 featured_image: "/assets/images/posts/ai-literacy.jpg"
+difficulty: "Easy"
 ---
 
 As artificial intelligence becomes increasingly integrated into our daily lives, a new form of literacy is emerging as essential: AI literacy. In today's world, understanding how AI works, its capabilities, limitations, and implications is becoming as fundamental as traditional reading and writing. In this article, we'll explore what AI literacy means, why it matters, and how you can develop these critical skills for the modern world.

@@ -30,18 +30,22 @@ permalink: /about/
 
       <div class="features-grid">
         <div class="feature-card">
+          <div class="category-icon"><i class="fas fa-book-open"></i></div>
           <h3>Straightforward Explanations</h3>
           <p>We break down complex AI concepts into simple, understandable language.</p>
         </div>
         <div class="feature-card">
+          <div class="category-icon"><i class="fas fa-clipboard-list"></i></div>
           <h3>Practical Guides</h3>
           <p>Step-by-step tutorials on how to use the latest AI tools effectively.</p>
         </div>
         <div class="feature-card">
+          <div class="category-icon"><i class="fas fa-star"></i></div>
           <h3>Honest Reviews</h3>
           <p>We test AI tools so you know which ones are worth your time.</p>
         </div>
         <div class="feature-card">
+          <div class="category-icon"><i class="fas fa-lightbulb"></i></div>
           <h3>Real-Life Applications</h3>
           <p>Examples of how AI can solve everyday problems and enhance various aspects of your life.</p>
         </div>
@@ -53,16 +57,19 @@ permalink: /about/
 
       <div class="category-cards">
         <div class="category-card">
+          <div class="category-icon"><i class="fas fa-tools"></i></div>
           <h3>AI Tools</h3>
           <p>Reviews and guides for the best AI tools across various categories—from productivity and creativity to specialized applications.</p>
           <a href="/category/ai-tools/" class="btn btn-primary">Explore AI Tools</a>
         </div>
         <div class="category-card">
+          <div class="category-icon"><i class="fas fa-brain"></i></div>
           <h3>AI Concepts</h3>
           <p>Simple explanations of key artificial intelligence ideas and technologies that are shaping our future.</p>
           <a href="/category/ai-concepts/" class="btn btn-primary">Explore AI Concepts</a>
         </div>
         <div class="category-card">
+          <div class="category-icon"><i class="fas fa-rocket"></i></div>
           <h3>AI Applications</h3>
           <p>Exploration of how AI is being used in different industries and aspects of daily life.</p>
           <a href="/category/ai-applications/" class="btn btn-primary">Explore AI Applications</a>
