@@ -6,10 +6,10 @@ url: "https://bitesize-aiq.github.io"
 baseurl: ""
 
 # Social media profiles
-twitter_username: bitesizeAIQ
+twitter_username: bitesize_aiq
 github_username: bitesize-aiq
-instagram_username: bitesizeaiq
-linkedin_username: company/bitesizeaiq
+instagram_username: bitesize_aiq
+# linkedin_username: company/bitesizeaiq
 
 # Build settings
 markdown: kramdown
@@ -24,10 +24,10 @@ plugins:
 
 # Author information
 author:
-  name: "AIQ Team"
+  name: "bitesize AIQ"
   bio: "We're passionate about making AI accessible to everyone through bite-sized insights on the latest AI tools and technologies."
-  email: "hello@bitesize-aiq.com"
-  twitter: "bitesizeaiq"
+  email: "bitesize.aiq@gmail.com"
+  twitter: "bitesize_aiq"
 
 # Pagination
 paginate: 9
